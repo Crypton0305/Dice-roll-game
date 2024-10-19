@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dice Game</h1>
+    
+    <div id="selection">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <div id="game" style="display: none;">
+        <h2 id="current-player"></h2>
+        <button id="player1-button" onclick="rollDice(0)">Player 1 Roll</button>
+        <button id="player2-button" onclick="rollDice(1)">Player 2 Roll</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
