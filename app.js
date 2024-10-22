@@ -15,7 +15,7 @@ function startGame() {
 
     players = ["Player 1 (" + player1Choice + ")", "Player 2 (" + player2Choice + ")"];
 
-    // Random winner ko choose krti hai
+    // Random winner ko choose krta hai
     var tossResult = (Math.random() < 0.5 ? 'heads' : 'tails'); 
     if (tossResult === player1Choice) {
         currentPlayerIndex = 0;
@@ -30,7 +30,7 @@ function startGame() {
     document.getElementById("game").style.display = "block";
     document.getElementById("current-player").innerText = players[currentPlayerIndex] + "'s Turn";
     
-    // toss ke bad us button ko enable krta hai jo toss win krta hai
+    // toss ke bad us player kai button ko enable krta hai jo toss win krta hai
     updateButtonStates();
 }
 
@@ -40,10 +40,10 @@ function rollDice(playerIndex) {
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
     
-    // Display the dice roll result
+    // Dice roll ke result ko display krta hai
     document.getElementById("result").innerText = "You rolled: " + dice1 + " and " + dice2;
 
-    // Check for double sixes
+    // Double sixes ko check krta hai
     if (dice1 === 6 && dice2 === 6) {
         setTimeout(function() {
             alert("You rolled a double six!" + players[currentPlayerIndex] + " wins!");
